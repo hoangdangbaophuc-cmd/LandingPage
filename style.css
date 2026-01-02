@@ -1,0 +1,66 @@
+.casrousel{
+    margin: 90px auto;
+    /* width: 90%; */
+    display: flex;
+
+    overflow-x: auto;
+    width: 100%;
+    padding: 50px;
+    /* max-width: 1200px; */
+
+}
+.casrousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    gap: 5em;
+    padding-right: 5em;
+    flex-shrink: 0;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    animation: spin 15s infinite linear;
+}
+.cards{
+    flex: 2.5rem 0 2.5rem;
+    height: 15rem;
+    width: 15rem;
+    padding: 5rem;
+    font-size: 4rem;
+    border-radius: .5rem;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    transition: transform 0.3s ease-out, background-color 0.2s;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    z-index: 1;
+}
+.cards img{
+    height: 15rem;
+    width: auto;
+    border-radius: 15px;
+}
+/* .cards:hover{
+    transform: scale(1.2);
+    z-index: 10;
+    background-color: hsl(0, 0%, 80%);
+    box-shadow: hsl(0, 0%, 30%);
+
+} */
+.cards.hover{
+    transform: scale(1.2);
+    z-index: 10;
+    background-color: hsl(0, 0%, 80%);
+    box-shadow: hsl(0, 0%, 30%);
+ }
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
